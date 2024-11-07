@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Context>
+
+    
+    <!-- !오라클 전용! 커넥션풀(DataSource) 리소스 설정 
+    
+    		name = DataSource을 가져다가 사용할 이름(정해서 사용)
+    		auth = DataSource를 실행할 인증 주체 톰캣
+    		type = 커넥션풀을 생성하기 위한 클래스경로
+    		driverClassName = DBMS종류별 드라이버 파일의 경로
+    		username = 접속할 DB ID
+    		password = 접속할 DB 비밀번호
+    		maxActive = 동시에 최대로 데이터베이스에 연결할 수 있는 Connection갯수
+    		maxWait =  새로운 연결이 생길 때까지 기다릴 수 있는 최대 지속시간.
+    		url = 접속할 데이터베이스 서버의 IP주소와 포트번호 및 SID
+    -->
+    
+    <Resource
+    	name = "jdbc/oracle"
+    	auth = "Container"
+    	type = "javax.sql.DataSource"
+    	driverClassName = "oracle.jdbc.OracleDriver"
+    	username = "scott"
+    	password = "tiger"
+    	maxActive = "50"
+    	maxWait = "-1"
+    	url = "jdbc:oracle:thin:@localhost:1521:XE"
+    />
+
+    
+</Context>
